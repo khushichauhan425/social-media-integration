@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            var search=new URLSearchParams(window.location.search);
+            var code,error
+            debugger
+            if(code= search.get("code"))
+            { 
+
+                if(window.opener!==null)window.opener.postMessage({ code})
+                else document.write(`grant token is ${code}`);
+            }
+            else if(error=search.get("error"))
+            {
+                 if (window.opener !== null) window.opener.postMessage({ error })
+                else document.write(`Error occured in getting grant: ${code}`);
+            }
+            else document.write(`<center>:)</center>`);
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

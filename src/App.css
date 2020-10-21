@@ -1,0 +1,233 @@
+
+body
+{
+  --theme-foreground-primary-color: #8a2be294;
+  --theme-background-primary-color:pink;
+  --theme-page-background:black;
+  --theme-shadow-angle:0px
+}
+.App {
+    text-align: center;
+    /* background-image: url("https://buffer.com/library/content/images/2020/06/Frame-22.png"); */
+    /* background-image: url("https://wallpaperset.com/w/download/99983"); */
+    /* background:  var(--theme-page-background);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: 100%;
+}
+@import url('https://fonts.googleapis.com/css2?family=Cutive:wght@500&display=swap&family=Bungee+Inline&family=Cedarville+Cursive&family=Dancing+Script:wght@700&family=Quicksand:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Cutive:wght@500&display=swap'); */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.front-root {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 16vmin 1fr 22vmin;
+    grid-template-columns: 1fr;
+}
+.front-header {
+    display: grid;
+    grid-template-columns: 16vmin 1fr;
+    align-items: center;
+    justify-items: center;
+}
+.logo-box img {
+    max-height: 16vmin;
+    object-fit: contain;
+}
+.front-body {
+    display: grid;
+    grid-template-rows: 10vmin 1fr;
+    grid-template-columns: 17vmin 1fr 17vmin;
+    grid-template-areas: ". heading ." "left center right";
+    align-items: center;
+    justify-items: center;
+}
+.front-body-title {
+    grid-area: heading;
+    font-family: Bungee Inline;
+    font-size: 8vmin;
+    transform: translateY(-4vmin);
+    line-height: 7vmin;
+    color:var(--theme-foreground-primary-color);
+}
+.main {
+    grid-area: center;
+}
+.left-button {
+    grid-area: left;
+    
+}
+.right-button {
+    grid-area: right;
+}
+.main {
+    grid-area: center;
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 45vmin;
+    height: 45vmin;
+    background: blueviolet;
+    border-radius: 10px;
+    align-self: center;
+    padding: 1vmin;
+    background: var(--theme-background-primary-color);
+    box-shadow: 0px 0px 5px 5px var(--theme-foreground-primary-color);
+    opacity: 0.9;
+}
+/*.main:after{
+  content: "";
+  display:block;
+  padding-bottom: 100%;
+
+}*/
+.front-footer {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-family: Dancing Script;
+    font-weight: bolder;
+    font-size: 4vmin;
+    text-shadow: 0px 0px 17px #000000;
+    color: var(--theme-background-primary-color);
+}
+.logo-box img {
+    width: 76%;
+}
+.fb-profile {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    height: 72%;
+    align-self: center;
+    padding: 2em;
+}
+.fb-profile-pic {
+    width: 5em;
+    justify-self: center !important;
+}
+.fb-profile-pic img {
+    width: 100%;
+}
+.fb-profile-item {
+    display: grid;
+    justify-self: start;
+}
+.fb-profile-item label {
+    zoom: 0.65;
+    justify-self: start;
+}
+.button {
+    opacity: 0.8;
+    padding:1vmin;
+    border: solid 1px blue;
+    border-radius: 4px;
+    background: var(--theme-foreground-primary-color) !important;
+    color: var(--theme-background-primary-color) !important;
+    cursor: pointer;
+}
+.button:active{
+    opacity: 1;
+}
+.left-button, .right-button {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border:none;
+    background: #6b676e94;
+    color: #8a2be294;
+    height: 8vmin;
+    width: 8vmin;
+    border-radius: 50%;
+}
+img {
+  border-radius: 50%;
+}
+/********************** */
+body
+{
+  width: 100vw;
+  height: 100vh;
+}
+#root {
+    height: 100%;
+    width: 100%;
+}
+.container {
+    display: grid;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 100%;
+    height: 100%;
+}
+.profile {
+    display: grid;
+    padding: 3vmin;
+    grid-template-rows: 4fr 1fr 1fr 2fr;
+}
+.login-Page
+{
+  
+    display: grid;
+    padding: 3vmin;
+}
+.profile-pic.profile-item {
+}
+.profile-pic > img{
+  height: 20vmin;
+}
+
+.profile-email.profile-item {}
+
+.profile-name.profile-item {}
+.profile-item {
+    font-size: 2vmin;
+    align-self: center;
+    color: var(--theme-foreground-primary-color);
+}
+#bg-layer
+{
+    position: fixed;
+    z-index: -1000;
+    width:100%;
+    height: 100%;
+    /* filter: blur(1px); */
+    background:  var(--theme-page-background);
+    background-size: cover;
+    background-position: center;
+}
